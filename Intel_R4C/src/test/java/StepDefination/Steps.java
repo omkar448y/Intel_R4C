@@ -32,8 +32,7 @@ public class Steps extends BaseClass
 	@When("User Enter Email {string} as and pass {string}")
 	public void user_enter_email_as_and_pass(String string, String string2) throws InterruptedException {
 	    Thread.sleep(5000);
-		lp.SetUserName(string);
-		lp.SetPassword(string2);
+		
 	}
 //	@When("User Enter Email {string} as and pass {string}")
 //	public void user_enter_email_as_and_pass(String Uname, String Password) throws InterruptedException {
