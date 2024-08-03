@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-03T10:39:37 IST" name="Default suite" finished-at="2024-08-03T10:39:50 IST" duration-ms="12842">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.TestRunner$CucumberTest@45d84a20]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2024-08-03T10:39:37 IST" name="Default test" finished-at="2024-08-03T10:39:50 IST" duration-ms="12842">
+      <class name="TestRunner.TestRunner$CucumberTest">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:TestRunner.TestRunner$CucumberTest@45d84a20]" started-at="2024-08-03T10:39:37 IST" name="setUpClass" finished-at="2024-08-03T10:39:38 IST" duration-ms="437" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@397ef2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:TestRunner.TestRunner$CucumberTest@45d84a20]" started-at="2024-08-03T10:39:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-08-03T10:39:50 IST" duration-ms="12330" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfuly Log in With L1 Agint Credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login Againt L1"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "PageObject.LoginPage.SetUserName(String)" because "this.lp" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "PageObject.LoginPage.SetUserName(String)" because "this.lp" is null
+at StepDefination.Steps.user_enter_email_as_and_pass(Steps.java:35)
+at ✽.User Enter Email "r4cl1agent02@intel.com.isvcqa24" as and pass "Intel@369"(file:///C:/Users/oyadavx/eclipse-workspace/Intel_R4C/src/test/java/Features/LoginPage.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:TestRunner.TestRunner$CucumberTest@45d84a20]" started-at="2024-08-03T10:39:50 IST" name="tearDownClass" finished-at="2024-08-03T10:39:50 IST" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- TestRunner.TestRunner$CucumberTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
