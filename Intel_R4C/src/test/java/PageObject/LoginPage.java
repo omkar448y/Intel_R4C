@@ -8,10 +8,13 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage {
 
 	public WebDriver ldriver;
+	public WebDriver driver;
+	private WebDriver rdriver;
 
-	public void LoginpPage(WebDriver rdriver) {
-
+	public LoginPage(WebDriver rdriver) {
+		// Assign the passed WebDriver instance to the class variable
 		ldriver = rdriver;
+		// Initialize all PageFactory elements on this page using the WebDriver instance
 		PageFactory.initElements(rdriver, this);
 	}
 
@@ -24,20 +27,25 @@ public class LoginPage {
 	@FindBy(xpath = "//input[@id=\"Login\"]")
 	WebElement Clickonlogin;
 
-	public void SetUserName(String Uname) {
-
-		textEmail.sendKeys(Uname);
-
+	public void SetUserName(String uname) {
+		textEmail.sendKeys(uname);
 	}
 
 	public void SetPassword(String Password) {
-
 		textPassword.sendKeys(Password);
-
 	}
 
 	public void Clickonlogin() {
 		Clickonlogin.click();
 	}
+
+//	public void clickmenuicon() {
+//		Menuicon.click();
+//
+//	}
+//
+//	public void logoutHomePage() {
+//		logout.click();
+//	}
 
 }

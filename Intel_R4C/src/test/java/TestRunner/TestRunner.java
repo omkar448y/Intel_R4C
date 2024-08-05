@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 public class TestRunner {
 
 	
-	@CucumberOptions(features = "C:\\Users\\oyadavx\\eclipse-workspace\\Intel_R4C\\src\\test\\java\\Features",
+	@CucumberOptions(features = "C:\\Users\\oyadavx\\git\\repository\\Intel_R4C\\src\\test\\java\\Features\\ContactPage.feature",
 
 			glue = "StepDefination",
 			dryRun=false, monochrome = true, 
