@@ -138,7 +138,7 @@ public class Steps extends BaseClass {
 		contacts.clickonreturnreson();
 		Thread.sleep(3000);
 		contacts.selectstockrotation();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 	}
 
@@ -183,14 +183,42 @@ public class Steps extends BaseClass {
 	public void click_on_product_validation_and_next_button() throws InterruptedException {
 		contacts.clickonproductvalidation();
 		Thread.sleep(3000);
-		contacts.clickonnextafterPV();
+		contacts.clickonnextafterPO();
+		Thread.sleep(3000);
 
 	}
 
 	@When("Enter Return Quantity")
 	public void enter_return_quantity() {
+//		contacts.enterQuantityfirst();
+//		contacts.enterQuantitySecond();
+//		contacts.enterQuantitythird();
+//		contacts.enterQuantityfourth();
+//		contacts.enterQuantityfive();
+//		contacts.enterQuantitysix();
+//		contacts.enterQuantityseven();
+//		contacts.enterQuantityeight();
+//		contacts.enterQuantitynine();
+//		contacts.enterQuantityten();
+		
+        contacts = new ContactPage_R4C_CaseCreation(driver);
 
-	}
+	        String[] quantities = {
+	            "10.0", "20.0", "30.0", "40.0", "50.0",
+	            "60.0", "70.0", "80.0", "90.0", "100.0"
+	        };
+
+	        for (int i = 0; i < quantities.length; i++) {
+	        	ContactPage_R4C_CaseCreation contactPage_R4C_CaseCreation = new ContactPage_R4C_CaseCreation(null);
+				contactPage_R4C_CaseCreation.enterQuantity(i + 1, quantities[i]);
+	        }}
+		
+		
+
+		
+		
+		
+	
 
 	@When("Click on the Get credit price")
 	public void click_on_the_get_credit_price() {
@@ -244,6 +272,6 @@ public class Steps extends BaseClass {
 
 	@Then("Close browser")
 	public void close_browser() {
-driver.close();
+//driver.close();
 	}
 }
