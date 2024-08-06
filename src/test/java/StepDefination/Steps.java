@@ -57,7 +57,10 @@ public class Steps extends BaseClass {
 
 	@When("User Click on logout link")
 	public void user_click_on_logout_link() throws InterruptedException {
-
+		Thread.sleep(2000);
+		lp.clickonmenuicon();
+		Thread.sleep(3000);
+		lp.clickonlogout();
 	}
 
 	@Then("Close brower")
@@ -137,36 +140,50 @@ public class Steps extends BaseClass {
 		contacts.selectstockrotation();
 		Thread.sleep(3000);
 
-
 	}
 
 	@When("Click on the Next button After Sold To")
 	public void click_on_the_next_button_after_sold_to() {
-contacts.selectstockrotation();
+		contacts.clickonnectaftersold();
+		System.out.println("----------------------All Steps Are executed successfuly--------------------------- ");
+
 	}
 
 	@When("Select Purchase\\/Sales Order button and Enter PO Number {string}")
-	public void select_purchase_sales_order_button_and_enter_po_number(String string) {
+	public void select_purchase_sales_order_button_and_enter_po_number(String string) throws InterruptedException {
+		contacts.clickonPORadiobutton();
+		Thread.sleep(3000);
+		contacts.EnterPONumber(string);
+		Thread.sleep(3000);
 
 	}
 
 	@Then("Click on the search button")
-	public void click_on_the_search_button() {
+	public void click_on_the_search_button() throws InterruptedException {
+		contacts.clickonsearch();
+		Thread.sleep(3000);
 
 	}
 
 	@Then("Select All Line items")
-	public void select_all_line_items() {
+	public void select_all_line_items() throws InterruptedException {
+		contacts.selectallcheckbox();
+		Thread.sleep(3000);
 
 	}
 
 	@Then("Click on the Next button after All Line Items")
-	public void click_on_the_next_button_after_all_line_items() {
+	public void click_on_the_next_button_after_all_line_items() throws InterruptedException {
+		contacts.clickonnextPO();
+		Thread.sleep(3000);
 
 	}
 
 	@Then("Click on Product Validation and Next button")
-	public void click_on_product_validation_and_next_button() {
+	public void click_on_product_validation_and_next_button() throws InterruptedException {
+		contacts.clickonproductvalidation();
+		Thread.sleep(3000);
+		contacts.clickonnextafterPV();
 
 	}
 
@@ -227,6 +244,6 @@ contacts.selectstockrotation();
 
 	@Then("Close browser")
 	public void close_browser() {
-
+driver.close();
 	}
 }

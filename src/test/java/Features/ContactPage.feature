@@ -18,7 +18,7 @@ Feature: R4C Case Creation
     And Click on the create button
     When User enter Sold to and other details
     And Click on the Next button After Sold To
-    And Select Purchase/Sales Order button and Enter PO Number "123456"
+    And Select Purchase/Sales Order button and Enter PO Number "4511564934"
     Then Click on the search button
     And Select All Line items
     And Click on the Next button after All Line Items
