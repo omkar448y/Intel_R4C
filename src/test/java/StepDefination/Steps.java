@@ -10,6 +10,8 @@ import PageObject.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import junit.framework.Assert;
+
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Steps extends BaseClass {
@@ -69,11 +71,15 @@ public class Steps extends BaseClass {
 
 	}
 
-//Contact - R4C-New case creation
+	// Contact - R4C-New case creation
+	// Scenario No-1 
 
 	@Given("User is logged in and on the Dashboard page")
 	public void user_is_logged_in_and_on_the_dashboard_page() {
-
+		contacts = new ContactPage_R4C_CaseCreation(driver);
+		String Title = contacts.getPageTitle();
+		System.out.println(Title);
+		Assert.assertEquals(Title, Title);
 	}
 
 	@When("User Click on Contact menu")
@@ -143,40 +149,36 @@ public class Steps extends BaseClass {
 	}
 
 	@When("Click on the Next button After Sold To")
-	public void click_on_the_next_button_after_sold_to() {
+	public void click_on_the_next_button_after_sold_to() throws InterruptedException {
 		contacts.clickonnectaftersold();
-		System.out.println("----------------------All Steps Are executed successfuly--------------------------- ");
+		Thread.sleep(5000);
 
 	}
 
 	@When("Select Purchase\\/Sales Order button and Enter PO Number {string}")
 	public void select_purchase_sales_order_button_and_enter_po_number(String string) throws InterruptedException {
 		contacts.clickonPORadiobutton();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		contacts.EnterPONumber(string);
 		Thread.sleep(3000);
-
 	}
 
 	@Then("Click on the search button")
 	public void click_on_the_search_button() throws InterruptedException {
 		contacts.clickonsearch();
 		Thread.sleep(3000);
-
 	}
 
 	@Then("Select All Line items")
 	public void select_all_line_items() throws InterruptedException {
 		contacts.selectallcheckbox();
 		Thread.sleep(3000);
-
 	}
 
 	@Then("Click on the Next button after All Line Items")
 	public void click_on_the_next_button_after_all_line_items() throws InterruptedException {
 		contacts.clickonnextPO();
 		Thread.sleep(3000);
-
 	}
 
 	@Then("Click on Product Validation and Next button")
@@ -185,40 +187,22 @@ public class Steps extends BaseClass {
 		Thread.sleep(3000);
 		contacts.clickonnextafterPO();
 		Thread.sleep(3000);
-
 	}
 
 	@When("Enter Return Quantity")
 	public void enter_return_quantity() {
-//		contacts.enterQuantityfirst();
-//		contacts.enterQuantitySecond();
-//		contacts.enterQuantitythird();
-//		contacts.enterQuantityfourth();
-//		contacts.enterQuantityfive();
-//		contacts.enterQuantitysix();
-//		contacts.enterQuantityseven();
-//		contacts.enterQuantityeight();
-//		contacts.enterQuantitynine();
-//		contacts.enterQuantityten();
-		
-        contacts = new ContactPage_R4C_CaseCreation(driver);
-
-	        String[] quantities = {
-	            "10.0", "20.0", "30.0", "40.0", "50.0",
-	            "60.0", "70.0", "80.0", "90.0", "100.0"
-	        };
-
-	        for (int i = 0; i < quantities.length; i++) {
-	        	ContactPage_R4C_CaseCreation contactPage_R4C_CaseCreation = new ContactPage_R4C_CaseCreation(null);
-				contactPage_R4C_CaseCreation.enterQuantity(i + 1, quantities[i]);
-	        }}
-		
-		
-
-		
-		
-		
-	
+		contacts.enterQuantityfirst();
+		contacts.enterQuantitySecond();
+		contacts.enterQuantitythird();
+		contacts.enterQuantityfourth();
+		contacts.enterQuantityfive();
+		contacts.enterQuantitysix();
+		contacts.enterQuantityseven();
+		contacts.enterQuantityeight();
+		contacts.enterQuantitynine();
+		contacts.enterQuantityten();
+		System.out.println("Enterd all values");
+	}
 
 	@When("Click on the Get credit price")
 	public void click_on_the_get_credit_price() {
@@ -272,6 +256,37 @@ public class Steps extends BaseClass {
 
 	@Then("Close browser")
 	public void close_browser() {
-//driver.close();
+        driver.close();
 	}
+
+     // Scenario No- 2
+     // Freight type as IMF using SO Search
+
+	@When("User enter Sold to and other details {string}")
+	public void user_enter_sold_to_and_other_details(String string) {
+	    
+	}
+	@When("User selects Freight Type as IMF")
+	public void user_selects_freight_type_as_imf() {
+	    
+	}
+	@When("User selects Collection Address & Collection Contact")
+	public void user_selects_collection_address_collection_contact() {
+	    
+	}
+	@When("User checks the Return Location")
+	public void user_checks_the_return_location() {
+	    
+	}
+	@When("User clicks on the Next button in Request Header details")
+	public void user_clicks_on_the_next_button_in_request_header_details() {
+	    
+	}
+	@When("User searches with SO Number {string}")
+	public void user_searches_with_so_number(String string) {
+	    
+	}
+	
+	
+	
 }

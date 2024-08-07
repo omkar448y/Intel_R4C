@@ -1,20 +1,26 @@
 package PageObject;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Utilities.WaitHelper;
+
 public class LoginPage {
 	public WebDriver ldriver;
 	public WebDriver driver;
-	private WebDriver rdriver;
+    private WaitHelper waitHelper;
 
+	//private WebDriver rdriver;
 	public LoginPage(WebDriver rdriver) {
 		// Assign the passed WebDriver instance to the class variable
 		ldriver = rdriver;
 		// Initialize all PageFactory elements on this page using the WebDriver instance
 		PageFactory.initElements(rdriver, this);
+		waitHelper = new WaitHelper(driver); // Initialize WaitHelper
 	}
 
 	@FindBy(xpath = "//input[@id=\"username\"]")
@@ -32,7 +38,12 @@ public class LoginPage {
 	@FindBy(xpath = "//a[normalize-space()='Log Out']")
 	WebElement Clickonlogout;            // To click on Log out option
 
+	
+	
+	
+	
 	public void SetUserName(String uname) {
+        waitHelper.waitForElement(textEmail, Duration.ofSeconds(15));
 		textEmail.sendKeys(uname);
 	}
 	public void SetPassword(String Password) {

@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import java.util.HashMap;
-import java.util.Map;
 public class ContactPage_R4C_CaseCreation {
 	public WebDriver ldriver;
 
@@ -43,8 +41,10 @@ public class ContactPage_R4C_CaseCreation {
 
 	@FindBy(xpath = "//button[normalize-space()='Create']") // To click on the create button
 	WebElement clickoncreatebutton;
+	
 	@FindBy(xpath = "/html[1]/body[1]/div[4]/div[1]/section[1]/div[1]/div[1]/div[2]/div[2]/section[1]/div[1]/div[1]/section[2]/div[1]/div[2]/div[1]/div[1]/c-r4c_-a-g_-case-header[1]/div[2]/lightning-card[1]/article[1]/div[2]/slot[1]/div[1]/div[1]/c-r4c_-a-g_-shipping-details[1]/lightning-layout[1]/slot[1]/lightning-layout-item[1]/slot[1]/div[1]/span[1]/c-r4c_-a-g_-reusable-lookup[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/lightning-input[1]/lightning-primitive-input-simple[1]/div[1]/div[1]/input[1]")
 	WebElement EnterSoldto;
+	
 	@FindBy(xpath = "//span[contains(text(),'6006683685-ALSO Deutschland GmbH')]") // To select searched contact
 	WebElement Clickonsoldtocontacts;
 
@@ -75,6 +75,7 @@ public class ContactPage_R4C_CaseCreation {
 	
 	@FindBy(xpath="//button[normalize-space()='Product Validation']")
 	WebElement  ProductvalidationButton;
+	
 	@FindBy(xpath="/html[1]/body[1]/div[4]/div[1]/section[1]/div[1]/div[1]/div[2]/div[2]/section[1]/div[1]/div[1]/section[2]/div[1]/div[2]/div[1]/div[1]/c-r4c_-a-g_-case-header[1]/div[2]/lightning-card[1]/article[1]/div[2]/slot[1]/div[3]/div[1]/c-r4c_-a-g_-p-o-search[1]/div[1]/div[1]/div[2]/c-r4c_-a-g_-line-items-result-table[1]/div[3]/div[1]/lightning-button[4]/button[1]")
 	WebElement ClickonNextAfterProductvalidation;                   // To click on the next button after Product validation check box 
 	  
@@ -99,8 +100,12 @@ public class ContactPage_R4C_CaseCreation {
 	@FindBy(xpath="(//input[@inputmode=\"decimal\"])[10]")
 	WebElement enterquantityten;
 
-	
-
+// Action Methods
+	public String getPageTitle()
+	{
+		return ldriver.getTitle();
+		
+	}
 	public void Clickoncontactdropdown() {
 		clickoncontactdropdown.click();
 	}
@@ -138,7 +143,7 @@ public class ContactPage_R4C_CaseCreation {
 		clickoncreatebutton.click();
 	}
 
-	public void EnterSoldTo() {
+	public void EnterSoldTo( ) {
 		EnterSoldto.sendKeys("6006683685");
 	}
 
@@ -190,99 +195,51 @@ public class ContactPage_R4C_CaseCreation {
 		ClickonNextAfterProductvalidation.click();
 	}
 	
+	public void enterQuantityfirst() 
+	{
+		enterquantityfirst.sendKeys("10");
+	}
+	public void enterQuantitySecond() 
+	{
+		enterquantitysecond.sendKeys("20");
+	}
+	public void enterQuantitythird() 
+	{
+		enterquantitythird.sendKeys("2");	
+	}
+	public void enterQuantityfourth() 
+	{
+		enterquantityfourth.sendKeys("2");	
+	}
 	
+	public void enterQuantityfive() 
+	{
+		enterquantityfive.sendKeys("2");	
+	}
+	public void enterQuantitysix() 
+	{
+		enterquantitysix.sendKeys("2");	
+	}
+	public void enterQuantityseven() 
+	{
+		enterquantityseven.sendKeys("2");	
+	}
+	public void enterQuantityeight() 
+	{
+		enterquantityeight.sendKeys("2");	
+	}
+	public void enterQuantitynine() 
+	{
+		enterquantitynine.sendKeys("2");	
+	}
+	public void enterQuantityten() 
+	{
+		enterquantityten.sendKeys("2");	
+	}
 	
-	
-//	public void enterQuantityfirst() 
-//	{
-//		enterquantityfirst.sendKeys("10");
-//	}
-//	public void enterQuantitySecond() 
-//	{
-//		enterquantitysecond.sendKeys("20");
-//	}
-//	public void enterQuantitythird() 
-//	{
-//		enterquantitythird.sendKeys("2");	
-//	}
-//	public void enterQuantityfourth() 
-//	{
-//		enterquantityfourth.sendKeys("2");	
-//	}
-//	
-//	public void enterQuantityfive() 
-//	{
-//		enterquantityfive.sendKeys("2");	
-//	}
-//	public void enterQuantitysix() 
-//	{
-//		enterquantitysix.sendKeys("2");	
-//	}
-//	public void enterQuantityseven() 
-//	{
-//		enterquantityseven.sendKeys("2");	
-//	}
-//	public void enterQuantityeight() 
-//	{
-//		enterquantityeight.sendKeys("2");	
-//	}
-//	public void enterQuantitynine() 
-//	{
-//		enterquantitynine.sendKeys("2");	
-//	}
-//	public void enterQuantityten() 
-//	{
-//		enterquantityten.sendKeys("2");	
-//	}
-	
-	//----------------------------------------------
-	
-	
-	 private Map<Integer, WebElement> quantityFieldsMap;
 
 	
-	    // Initialize map in the constructor
-	    private void initializeQuantityFieldsMap() {
-	        quantityFieldsMap = new HashMap<Integer, WebElement>();
-	        quantityFieldsMap.put(1, enterquantityfirst);
-	        quantityFieldsMap.put(2, enterquantitysecond);
-	        quantityFieldsMap.put(3, enterquantitythird);
-	        quantityFieldsMap.put(4, enterquantityfourth);
-	      //  quantityFieldsMap.put(5, enterQuantityFifth);
-	        quantityFieldsMap.put(6, enterquantitysix);
-	        quantityFieldsMap.put(7, enterquantityseven);
-	        quantityFieldsMap.put(8, enterquantityeight);
-	        quantityFieldsMap.put(9, enterquantitynine);
-	        quantityFieldsMap.put(10, enterquantityten);
-	    }
-	    // Method to enter quantity in a specific field
-	    public void enterQuantity(int index, String quantity) {
-	        if (quantityFieldsMap == null) {
-	            initializeQuantityFieldsMap();
-	        }
-
-	        WebElement field = quantityFieldsMap.get(index);
-	        if (field == null) {
-	            throw new IndexOutOfBoundsException("Invalid field index");
-	        }
-
-	      //  field.clear();
-	        field.sendKeys(quantity);
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	    }}	
+	    }	
 	
 	
 	

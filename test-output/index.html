@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\oyadavx\AppData\Local\Temp\testng-eclipse-1097305444\testng-customsuite.xml</span>
+                    <span>C:\Users\oyadavx\AppData\Local\Temp\testng-eclipse-1274944181\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 2 failed,   </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,11 +104,6 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="TestRunner.TestRunner$CucumberTest" class="method navigator-link" hash-for-method="runScenario(&quot;Successfuly Log in With L1 Agint Credentials&quot;, &quot;Login Againt L1&quot;)">runScenario("Successfuly Log in With L1 Agint Credentials", "Login Againt L1")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestRunner.TestRunner$CucumberTest" class="method navigator-link" hash-for-method="runScenario(&quot;Creating a new R4C case with &quot;Stock Rotation &amp; Return&quot; service type&quot;, &quot;R4C Case Creation&quot;)">runScenario("Creating a new R4C case with "Stock Rotation & Return" service type", "R4C Case Creation")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -135,14 +130,15 @@
                   </a> <!-- runScenario("Successfuly Log in With L1 Agint Credentials", "Login Againt L1") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Successfuly Log in With L1 Agint Credentials","Login Againt L1")</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: failed to change window state to &apos;normal&apos;, current state is &apos;maximized&apos;
-  (Session info: chrome=127.0.6533.99)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=127.0.6533.90)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8e432ef1b3dfeb9eff91162151c93c29, maximizeCurrentWindow {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.99, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\oyadavx\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51900}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51900/devtoo..., se:cdpVersion: 127.0.6533.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8e432ef1b3dfeb9eff91162151c93c29
+Command: [32310675b81e74b87ad60570a5a717ad, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.90, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\oyadavx\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61324}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61324/devtoo..., se:cdpVersion: 127.0.6533.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 32310675b81e74b87ad60570a5a717ad
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -158,27 +154,8 @@ Session ID: 8e432ef1b3dfeb9eff91162151c93c29
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:591)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
 	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:1034)
-	at StepDefination.Steps.click_on_login(Steps.java:48)
-	at ✽.Click on login(file:///C:/Users/oyadavx/eclipse-workspace/Intel_ISVC_R4C/src/test/java/Features/LoginPage.feature:8)
-
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Creating a new R4C case with &quot;Stock Rotation &amp; Return&quot; service type&quot;, &quot;R4C Case Creation&quot;)">
-                  </a> <!-- runScenario("Creating a new R4C case with "Stock Rotation & Return" service type", "R4C Case Creation") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Creating a new R4C case with "Stock Rotation & Return" service type","R4C Case Creation")</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy23.sendKeys(Unknown Source)
-	at PageObject.ContactPage_R4C_CaseCreation.enterQuantity(ContactPage_R4C_CaseCreation.java:270)
-	at StepDefination.Steps.enter_return_quantity(Steps.java:213)
-	at ✽.Enter Return Quantity(file:///C:/Users/oyadavx/eclipse-workspace/Intel_ISVC_R4C/src/test/java/Features/ContactPage.feature:26)
+	at StepDefination.Steps.click_on_login(Steps.java:50)
+	at ✽.Click on login(file:///C:/Users/oyadavx/git/repository3/Intel_ISVC_R4C/src/test/java/Features/LoginPage.feature:8)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -190,7 +167,7 @@ Session ID: 8e432ef1b3dfeb9eff91162151c93c29
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\oyadavx\AppData\Local\Temp\testng-eclipse-1097305444\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\oyadavx\AppData\Local\Temp\testng-eclipse-1274944181\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -247,20 +224,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'TestRunner.TestRunner$CucumberTest')
-data.setCell(0, 3, 130872);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'runScenario')
-data.setCell(1, 2, 'TestRunner.TestRunner$CucumberTest')
-data.setCell(1, 3, 28341);
+data.setCell(0, 3, 104619);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -288,24 +261,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">TestRunner.TestRunner$CucumberTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@436bd4df)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@4b97c4ad)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Creating a new R4C case with "Stock Rotation & Return" service type", "R4C Case Creation")</span>
-                <span class="method-start">457 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">runScenario("Successfuly Log in With L1 Agint Credentials", "Login Againt L1")</span>
-                <span class="method-start">131341 ms</span>
+                <span class="method-start">410 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">159693 ms</span>
+                <span class="method-start">105045 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
