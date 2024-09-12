@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-
 	public WebDriver ldriver;
 	public WebDriver driver;
 	private WebDriver rdriver;
@@ -19,18 +18,23 @@ public class LoginPage {
 	}
 
 	@FindBy(xpath = "//input[@id=\"username\"]")
-	WebElement textEmail;
+	WebElement textEmail;                   // TO Enter Email id into text field
 
 	@FindBy(xpath = "//input[@id=\"password\"]")
-	WebElement textPassword;
+	WebElement textPassword;                // To Enter Password into Text field
 
 	@FindBy(xpath = "//input[@id=\"Login\"]")
-	WebElement Clickonlogin;
+	WebElement Clickonlogin;                 // To click on Login button
+
+	@FindBy(xpath = "/html[1]/body[1]/div[4]/div[1]/section[1]/header[1]/div[2]/span[1]/div[2]/ul[1]/li[7]/span[1]/div[1]/button[1]/div[1]/span[1]/div[1]/span[1]")
+	WebElement ClickonIcon;               // To click on Menu icon  
+
+	@FindBy(xpath = "//a[normalize-space()='Log Out']")
+	WebElement Clickonlogout;            // To click on Log out option
 
 	public void SetUserName(String uname) {
 		textEmail.sendKeys(uname);
 	}
-
 	public void SetPassword(String Password) {
 		textPassword.sendKeys(Password);
 	}
@@ -39,13 +43,12 @@ public class LoginPage {
 		Clickonlogin.click();
 	}
 
-//	public void clickmenuicon() {
-//		Menuicon.click();
-//
-//	}
-//
-//	public void logoutHomePage() {
-//		logout.click();
-//	}
+	public void clickonmenuicon() {
+		ClickonIcon.click();
+	}
+
+	public void clickonlogout() {
+		Clickonlogout.click();
+	}
 
 }
