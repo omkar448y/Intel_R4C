@@ -5,8 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 public class TestRunner {
 
-	
-	@CucumberOptions(features = "C:\\Users\\oyadavx\\git\\repository\\Intel_R4C\\src\\test\\java\\Features\\ContactPage.feature",
+	@CucumberOptions(features = "C:\\Users\\oyadavx\\eclipse-workspace\\Intel_ISVC_R4C\\src\\test\\java\\Features",
 
 			glue = "StepDefination",
 			dryRun=false, monochrome = true, 
@@ -14,5 +13,4 @@ public class TestRunner {
 			public class CucumberTest extends AbstractTestNGCucumberTests {
 
 			} 
-
 }
